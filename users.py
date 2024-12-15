@@ -1,4 +1,3 @@
-# users.py
 from flask import Blueprint, jsonify, request
 from routes import LOGIN_ROUTE, UPDATE_ROUTE, DELETE_USER_ROUTE
 
@@ -11,7 +10,7 @@ def login():
     return jsonify({"message": "Login page"}), 200
 
 # Route to simulate updating a user's login number (POST method)
-@users_bp.route('/update', methods=['POST'])
+@users_bp.route(UPDATE_ROUTE, methods=['POST'])
 def update_login():
     login_number = request.json.get("login_number")
     if not login_number:
@@ -19,6 +18,6 @@ def update_login():
     return jsonify({"message": f"Login number updated to {login_number}"}), 200
 
 # Route to simulate deleting a user (DELETE method)
-@users_bp.route('/delete/<int:user_id>', methods=['DELETE'])
+@users_bp.route(DELETE_USER_ROUTE, methods=['DELETE'])
 def delete_user(user_id):
     return jsonify({"message": f"User with ID {user_id} deleted successfully"}), 200

@@ -1,6 +1,6 @@
 # routes.py
 
 BASE_API_ROUTE = "/api/private/v1"
-LOGIN_ROUTE = f"{BASE_API_ROUTE}/login"
-UPDATE_ROUTE = f"{LOGIN_ROUTE}/update"
-DELETE_USER_ROUTE = f"{LOGIN_ROUTE}/delete/{{user_id}}"
+login_route = f"{BASE_API_ROUTE}/login"
+UPDATE_ROUTE = f"{login_route}/update"
+DELETE_USER_ROUTE = f"{login_route}/delete/{{user_id}}"
