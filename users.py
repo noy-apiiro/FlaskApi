@@ -1,8 +1,8 @@
 from flask import Blueprint, jsonify, request
-from routes import LOGIN_ROUTE, UPDATE_ROUTE, DELETE_USER_ROUTE
+from routes import login_route, UPDATE_ROUTE, DELETE_USER_ROUTE
 
 # Create a blueprint for user routes
-users_bp = Blueprint('users', __name__, url_prefix=LOGIN_ROUTE)
+users_bp = Blueprint('users', __name__, url_prefix=login_route)
 
 # Route to simulate user login (GET method)
 @users_bp.route('/')
