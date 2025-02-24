@@ -2,8 +2,8 @@ from flask import Blueprint, jsonify, request
 # from routes import *
 # from routes import login_route, UPDATE_ROUTE, DELETE_USER_ROUTE
 import routes
-from routes2 import *
-# from routes2 import Cons
+# from routes2 import *
+from routes2 import Cons
 import routes2
 
 
@@ -33,7 +33,7 @@ def update_login():
 def delete_user(user_id):
     return jsonify({"message": f"User with ID {user_id} deleted successfully"}), 200
 
-@users_bp.route(Cons.DEFAULT_NAME, methods=['DELETE'])
+@users_bp.route(Cons.DEFAULT_NAME2, methods=['DELETE'])
 def delete_user(user_id):
     return jsonify({"message": f"User with ID {user_id} deleted successfully"}), 200
 
