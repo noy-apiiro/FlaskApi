@@ -1,5 +1,3 @@
-# routes.py
-
 BASE_API_ROUTE = "/api/private/v1"
 login_route = f"{BASE_API_ROUTE}/login"
 UPDATE_ROUTE = f"{login_route}/update"
